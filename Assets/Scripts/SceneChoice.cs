@@ -9,7 +9,8 @@ public class SceneChoice : MonoBehaviour
     public enum GameMode
     {
         Player, // 0 
-        AI      // 1
+        AI,     // 1
+        SecretLevel // которого нет =)
     }
 
     private int choice = 0;
