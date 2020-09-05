@@ -37,15 +37,19 @@ public class AudioController : MonoBehaviour
         if (song.volume < maxVolume && usersInput == false)
             SlowlyIncreaseVolume(song.volume);
         
-        if (Input.mouseScrollDelta.y > 0)
+        if (Input.GetButton("VolumeLevel+"))
         {
-            song.volume += 0.005f;
+            song.volume += 0.0005f;
             usersInput = true;
         }
-        if (Input.mouseScrollDelta.y < 0)
+        if (Input.GetButton("VolumeLevel-"))
         {
-            song.volume -= 0.005f;
+            song.volume -= 0.0005f;
             usersInput = true;
+        }
+        if (Input.GetButtonDown("RandomSong"))
+        {
+            PlayRandomSong();
         }
     }
 
